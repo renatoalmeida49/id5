@@ -1,5 +1,5 @@
 /* RESET */
-* {
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
@@ -225,14 +225,14 @@ input, textarea {
     justify-content: space-around;
 }
 
-.welcome-option-box {
-    max-width: 157px;
-    height: 261px;
+.welcome-option {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    margin-bottom: 35px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 157px;
+    min-height: 338px;
+    margin: 5px 0;
 }
 
 .welcome-option-icon {
@@ -243,7 +243,6 @@ input, textarea {
     height: 80px;
     background: #62497c;
     border-radius: 50%;
-    margin-bottom: 16px;
 }
 
 .welcome-option-title {
@@ -252,19 +251,18 @@ input, textarea {
     color: #62497c;
     font-weight: bold;
     font-size: 14.74px;
-    margin-top: 16px;
 }
 
 .welcome-option-description {
-    margin-top: 28px;
     font-size: 0.92rem;
     color: #9c9c9c;
     font-family: 'Helvetica';
 }
 
-.welcome-option-button button {
+.welcome-option button {
     width: 123px;
     height: 42px;
+    border: 1px solid transparent;
 }
 
 /* NEWSLETTER */
@@ -377,10 +375,11 @@ input, textarea {
     align-self: center;
 }
 
-.blog-item-button button {
+.blog-item button {
     width: 124px;
     height: 42px;
     padding: 12px;
+    margin: 0 auto;
 }
 
 .blog-hover:hover {
