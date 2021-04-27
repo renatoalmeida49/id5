@@ -17,7 +17,7 @@
                     ZIPPY
                 </div>
 
-                <div class="header-navbar-ul">
+                <nav class="header-navbar-ul">
                     <ul>
                         <li class="active">Home</li>
                         <li>Zappy</li>
@@ -25,7 +25,23 @@
                         <li>Blog</li>
                         <li>Contact</li>
                     </ul>
-                </div>
+                </nav>
+
+                <button class="button-nav-mobile">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+
+                <nav class="header-navbar-mobile">
+                    <ul>
+                        <li class="active">Home</li>
+                        <li>Zappy</li>
+                        <li>Newsletter</li>
+                        <li>Blog</li>
+                        <li>Contact</li>
+                    </ul>
+                </nav>
             </div>
 
             <div class="header-description">
@@ -190,11 +206,9 @@
     </section>
 
     <section id="map">
-        <div class="map-image">
-            
-        </div>
+        <div class="map-image"></div>
 
-        <div class="map-form">
+        <form class="map-form">
             <h1>Contact</h1>
             
             <label for="nome">Name</label>
@@ -210,7 +224,7 @@
             <textarea id="message"></textarea>
 
             <button class="purple-background">Send</button>
-        </div>
+        </form>
     </section>
 
     <footer id="footer">
@@ -242,5 +256,25 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.button-nav-mobile')
+            .addEventListener('click', () => {
+                document.querySelector('.header-navbar-mobile')
+                    .classList.toggle('flex')
+            })
+
+        document.querySelector('.header-navbar-mobile')
+            .addEventListener('mouseleave', (event) => {
+                event.currentTarget.classList.toggle('flex')
+            })
+            
+        window.addEventListener('resize', () => {
+            if(window.innerWidth > 656) {
+                if(document.querySelector('.header-navbar-mobile').classList.contains('flex'))
+                    document.querySelector('.header-navbar-mobile').classList.remove('flex')
+            }
+        })
+    </script>
 </body>
 </html>

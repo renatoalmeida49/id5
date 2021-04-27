@@ -30,12 +30,12 @@ body {
 }
 
 button {
-    padding: 12px;
-    border-radius: 4px;
+    padding: 1rem;
+    border-radius: 0.25rem;
     border: none;
     font-family: 'Montserrat-Bold';
     text-transform: uppercase;
-    font-size: 10.32px;
+    font-size: 0.645rem;
     cursor: pointer;
     color: #323232;
 }
@@ -44,6 +44,7 @@ button {
     max-width: 707px;
     margin: 0 auto;
     width: 100%;
+    padding: 0 0.625rem;
 }
 
 input, textarea {
@@ -83,7 +84,7 @@ input, textarea {
 }
 
 .header-navbar-logo {
-    font-size: 29.47px;
+    font-size: 1.84rem;
     cursor: pointer;
 }
 
@@ -92,6 +93,7 @@ input, textarea {
     flex-wrap: wrap;
     justify-content: space-between;
     font-family: 'Montserrat-Bold';
+    position: relative;
 }
 
 .header-navbar-ul ul {
@@ -102,13 +104,14 @@ input, textarea {
 .header-navbar-ul li {
     display: inline-block;
     font-family: 'Montserrat-Bold';
-    font-size: 10.32px;
+    font-size: 0.645rem;
     margin-left: 32px;
     cursor: pointer;
 }
 
 .header-navbar-ul li:hover,
-.header-navbar-ul li:active {
+.header-navbar-ul li:active,
+.header-navbar-mobile li:hover {
     color: #ffe26d;
     transform: scale(1.1);
 }
@@ -119,13 +122,13 @@ input, textarea {
 
 .header-description-title {
     font-family: 'Montserrat-Bold';
-    font-size: 40.69px;
+    font-size: 2.54rem;
     max-width: 550px;
 }
 
 .header-description-text {
     font-family: 'Roboto';
-    font-size: 19.16px;
+    font-size: 1.19rem;
     max-width: 431px;
     margin-top: 40px;
     margin-bottom: 34px;
@@ -136,6 +139,45 @@ input, textarea {
     width: 124px;
     height: 42px;
     padding: 12px;
+}
+
+/* MOBILE MENU */
+
+.button-nav-mobile {
+    display: none;
+    width: 3rem;
+    padding: 0px;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+}
+
+.line {
+    background: white;
+    width: 100%;
+    height: 6px;
+    display: block;
+    margin: 0.3rem;
+    border-radius: 4px;
+}
+
+.header-navbar-mobile {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 32px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.header-navbar-mobile li {
+    cursor: pointer;
+}
+
+.header-navbar-mobile ul {
+    list-style: none;
 }
 
 /* WELCOME */
@@ -151,12 +193,14 @@ input, textarea {
 .welcome-text h1 {
     text-align: center;
     font-family: 'Montserrat-Bold';
-    font-size: 44.21px;
+    font-size: 2.76rem;
     margin-top: 86px;
 }
 
 .welcome-text-description {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     font-weight: lighter;
     justify-content: space-between;
 }
@@ -164,7 +208,7 @@ input, textarea {
 .welcome-text-description p {
     max-width: 435px;
     font-family: 'Roboto';
-    font-size: 29.47px;
+    font-size: 1.84rem;
     margin: 0px;
 }
 
@@ -176,6 +220,7 @@ input, textarea {
 
 .welcome-menu {
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
     justify-content: space-around;
 }
@@ -219,7 +264,7 @@ input, textarea {
 
 .welcome-option-description {
     margin-top: 28px;
-    font-size: 13.26px;
+    font-size: 0.92rem;
     color: #9c9c9c;
     font-family: 'Helvetica';
 }
@@ -248,23 +293,24 @@ input, textarea {
     text-align: center;
     color: white;
     font-family: 'Montserrat-Bold';
-    font-size: 44.21px;
+    font-size: 2.76rem;
     margin-top: 0px;
     margin-bottom: 30px;
 }
 
 .newsletter-form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .newsletter-form input {
-    font-size: 19.16px;
+    font-size: 1.19rem;
     padding: 15px;
     padding-left: 32px;
     margin: 0px;
     font-family: 'Montserrat-Regular';
-    width: 413px;
+    max-width: 413px;
     border-radius: 2px 0 0 2px;
 }
 
@@ -292,13 +338,17 @@ input, textarea {
 .blog-title {
     text-align: center;
     font-family: 'Montserrat-Bold';
-    font-size: 44.21px;
+    font-size: 2.76rem;
     color: #040405;
     margin-top: 74px;
 }
 
 .blog-items {
     display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .blog-item {
@@ -309,24 +359,25 @@ input, textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 5px 0px 5px 0px;
 }
 
 .blog-item-title {
     font-family: 'Montserrat-Bold';
     text-transform: uppercase;
     width: 170px;
-    font-size: 14.74px;
+    font-size: 0.92rem;
     align-self: center;
 }
 
 .blog-item-date {
     color: #9c9c9c;
     font-family: 'Helvetica';
-    font-size: 13.26px;
+    font-size: 0.82rem;
 }
 
 .blog-item-description {
-    font-size: 13.26px;
+    font-size: 0.82rem;
     width: 193px;
     height: 84px;
     font-family: 'Helvetica';
@@ -370,7 +421,7 @@ input, textarea {
 }
 
 .map-form h1 {
-    font-size: 44.21px;
+    font-size: 2.76rem;
     text-transform: initial;
     margin: 0px;
     color: #040405;
@@ -378,25 +429,27 @@ input, textarea {
 
 .map-form label {
     max-width: 309px;
-    font-size: 10.32px;
+    font-size: 0.645rem;
     color: #323232;
 }
 
 .map-form input {
-    font-size: 36px;
+    font-size: 2.25rem;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     max-width: 309px;
+    width: 100%;
 }
 
 .map-form textarea {
     height: 144px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     max-width: 309px;
+    width: 100%;
 }
 
 .map-form button {
     max-width: 309px;
-    width: 309px;
+    width: 100%;
     height: 43px;
     padding: 0px;
     border-radius: 0px;
@@ -405,6 +458,7 @@ input, textarea {
 /* FOOTER */
 #footer .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
     margin-top: 79px;
@@ -413,7 +467,7 @@ input, textarea {
 
 .footer-text {
     font-family: 'Helvetica';
-    font-size: 13.26px;
+    font-size: 0.82rem;
 }
 
 .footer-social-media-images {
@@ -437,10 +491,47 @@ input, textarea {
     text-transform: uppercase;
     margin: 0px;
     margin-bottom: 25px;
-    font-size: 10.32px;
+    font-size: 0.645rem;
 }
 
-.footer-addrees {
-    font-size: 13.26pt;
+/* STATES */
+
+.flex {
+    display: flex;
 }
 
+@media (max-width: 656px) {
+    html {
+        font-size: 90%;
+    }
+
+    .header-navbar-ul {
+        display: none;
+    }
+
+    .button-nav-mobile {
+        display: inline-block;
+    }
+
+    .welcome-text-description {
+        justify-content: center;
+    }
+
+    #map {
+        flex-direction: column;
+    }
+
+    .map-form {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 464px) {
+    .newsletter-title {
+        margin-bottom: 15px;
+    }
+    .newsletter-button {
+        margin-bottom: 0px;
+    }
+}
