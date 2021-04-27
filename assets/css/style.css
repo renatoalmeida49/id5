@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-body, ul, li {
+body, ul, li, h2, p {
     margin: 0px;
     padding: 0px;
 }
@@ -233,13 +233,6 @@ input, textarea {
     align-items: center;
     flex-direction: column;
     margin-bottom: 35px;
-}
-
-.welcome-option {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .welcome-option-icon {
